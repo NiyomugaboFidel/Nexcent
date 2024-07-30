@@ -35,7 +35,7 @@ const Client: React.FC = () => {
             {logos.map((logo, index) => (
                 <div className='flex items-center justify-center' key={index}>
                     <img  className='' src={logo} alt='Clients' />
-                    <span className=' text-[9px] text-center'>lorem company</span>
+                    <span className='text-[5px] leading-3 lg:text-[9px] text-center flex items-center justify-center absolute -bottom-1'>company</span>
                 </div>
             
             ))}

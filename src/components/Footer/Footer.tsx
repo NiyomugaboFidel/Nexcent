@@ -13,21 +13,22 @@ const Footer:React.FC = () => {
        
        <div  className=' bg-black flex justify-center items-center w-full h-full'>
        <div className='bg-black m-3 h-full w-[400px] md:w-full lg:h-[229px]  flex flex-col md:flex-row md:py-[22px] justify-between items-center gap-5 md:gap-[87px] md:px-[100px] '>
-          <div className=' w-full md:w-[40%] h-full md:h-[140px] flex flex-col items-start justify-center gap-3 '>
-          <span className="flex">
-              <img  src="/logo2.svg" alt="" />
+          <div className=' w-full md:w-[40%] h-full md:h-[140px] flex flex-col items-center justify-center gap-3 '>
+          <span className="flex justify-center items-start w-full h-full text-center">
+              <img  className='' src="/logo2.svg" alt="" />
             </span>
-            <span className='text-silver leading-[25px] text-[11px] '>
+            <span className='text-silver text-center leading-[25px] text-[11px] '>
             Copyright &copy; {new Date().getFullYear()} Landify UI Kit.
             <p className=' leading-p text-p text-silver '>All rights reserved</p>
             </span>
-            <span className='flex items-center justify-center gap-5'>
-              <a href="#" className='text-silver  font-semibold text-[20px]'> <FaGithub /> </a>
-              <a href="#" className='text-silver font-semibold text-[20px]'> <PiInstagramLogoThin /> </a>
-              <a href="#" className='text-silver  font-semibold text-[20px]'><FaXTwitter /></a>
-              <a href="#" className='text-silver  font-semibold text-[20px]'><BiLogoGmail /></a>
+            <span className='flex items-center text-center justify-center gap-5'>
+              <a href="#" className='text-silver  font-semibold text-[16px] lg:text-[20px]'> <FaGithub /> </a>
+              <a href="#" className='text-silver font-semibold  text-[16px] lg:text-[20px]'> <PiInstagramLogoThin /> </a>
+              <a href="#" className='text-silver  font-semibold  text-[16px] lg:text-[20px]'><FaXTwitter /></a>
+              <a href="#" className='text-silver  font-semibold  text-[16px] lg:text-[20px]'><BiLogoGmail /></a>
             </span>
           </div>
+
           <div className='flex items-start justify-normal w-full h-full py-[20px]'>
           <div className='w-full h-full pb-2   gap-2 md:gap-[20px] grid grid-cols-3  '>
              <div className='w-full h-full'>
