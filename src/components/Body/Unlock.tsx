@@ -2,7 +2,7 @@ import React from "react";
 import image from "../../assets/home-3.svg";
 import Button from "../Buttons/Button";
 import Section from "../Section";
-import ScrollReveal, { ScrollReveal2 } from "../ScrollReveal";
+import ScrollReveal, { ScrollReveal2 } from "../Animations/ScrollReveal";
 
 const Unlock: React.FC = () => {
   return (

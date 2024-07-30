@@ -4,6 +4,8 @@
 
 *:root{
   font-family: inter;
+
+
 }
 a{
  text-decoration: none;
@@ -30,5 +32,11 @@ html{
   background: #bbb;
 }
 
+input::placeholder{
+  color: rgb(213, 211, 211);
+  font-size: 11px;
 
-
+}
+input{
+  font-size: 12px;
+}

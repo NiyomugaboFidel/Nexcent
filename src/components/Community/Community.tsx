@@ -2,7 +2,7 @@ import React from "react";
 import Client from "../Client/Client";
 import Section from "../Section";
 import data from "./data";
-import ScrollReveal from "../ScrollReveal";
+import ScrollReveal from "../Animations/ScrollReveal";
 
 const Community: React.FC = () => {
   return (

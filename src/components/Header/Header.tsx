@@ -19,10 +19,8 @@ const Header = () => {
         <div className="left-header">
           <div className="">
             <span className="flex">
-              <img width={30} src="./logo.svg" alt="" />
-              <span className="text-black font-bold text-[16px] lg:text-[25px]">
-                Nexcent
-              </span>
+              <img className="w-full h-full" src="/logo.svg" alt="" />
+             
             </span>
           </div>
         </div>

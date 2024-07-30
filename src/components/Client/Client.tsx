@@ -13,7 +13,7 @@ const Client: React.FC = () => {
     slidesToShow: 8,
     slidesToScroll: 8,
     autoplay: true,
-    autoplaySpeed: 15000,
+    autoplaySpeed:6000,
   };
 
  
@@ -21,9 +21,9 @@ const Client: React.FC = () => {
   console.log(logos)
 
   return (
-  <div>
+  <div className='my-[40px]'>
     
-    <div className=''>
+    <div className='h-full w-full'>
          <h2 className=' lg:leading-h2 lg:text-h2 text-center font-semibold text-black '>
          Our Clients
          </h2>
@@ -35,6 +35,7 @@ const Client: React.FC = () => {
             {logos.map((logo, index) => (
                 <div className='flex items-center justify-center' key={index}>
                     <img  className='' src={logo} alt='Clients' />
+                    <span className=' text-[9px] text-center'>lorem company</span>
                 </div>
             
             ))}
