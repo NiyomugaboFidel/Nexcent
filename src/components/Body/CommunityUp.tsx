@@ -6,7 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const CommunityUp: React.FC = () => {
   return (
-    <Section id="">
+    <Section id="blog">
       <div className="">
         <div className="flex flex-col items-center justify-center lg:h-[354px]">
           <div>

@@ -21,7 +21,7 @@ const Customers: React.FC = () => {
   };
 
   return (
-    <Section id="">
+    <Section id="pricing">
       <div>
         <div className="  gap-[64px] block lg:flex  justify-between w-full h-full lg:h-[271px] ">
           {/* left side */}

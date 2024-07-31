@@ -4,13 +4,14 @@ const data = [
         name:'Home',
         link:'#home'
     },
-    {
-        name:'Features',
-        link:'#features'
-    },
+   
     {
         name:'Community',
         link:'#community'
+    },
+    {
+        name:'Features',
+        link:'#features'
     },
     {
         name:'Blog',

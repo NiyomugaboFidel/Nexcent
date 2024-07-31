@@ -51,10 +51,10 @@ const Header = () => {
         {/* menu bar */}
         <div
           className={`right-header  bg-white ${
-            Open ? "top-[60px] right-[0px] " : "top-[100px] right-[-100%]"
+            Open ? "top-[60px] right-[0px] " : "top-[60px] right-[-100%]"
           } h-[100vh]  border p-4 
             block absolute transition-all 
-         ease-in-out  duration-500 lg:hidden gap-[17px] `}
+         ease-in-out  duration-500 lg:hidden w-full gap-[17px] `}
         >
           <div
             className={`lg:flex mt-[3rem] items-center 
@@ -65,7 +65,7 @@ const Header = () => {
                 key={i}
                 onClick={() => setOpen((prev) => !prev)}
                 className={`
-                  p-2 rounded-md shadow-sm border my-5 w-full  list-none  leading-[17px] font-[500]  px-[17px]`}
+                  p-2 rounded-md shadow-sm border my-5 w-[200px]  list-none  leading-[17px] font-[500]  px-[17px]`}
               >
                 <a href={item.link}>{item.name}</a>
               </li>
@@ -80,7 +80,7 @@ const Header = () => {
         </div>
 
         {/* menu */}
-        <div className=" block lg:hidden">
+        <div className=" block lg:hidden w-full absolute left-[70%] px-[20px] m-auto">
           {!Open ? (
             <HiMenuAlt3
               className=" cursor-pointer"

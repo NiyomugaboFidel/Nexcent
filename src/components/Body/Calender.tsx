@@ -6,7 +6,7 @@ import ScrollReveal, { ScrollReveal2 } from "../Animations/ScrollReveal";
 
 const Calender: React.FC = () => {
   return (
-    <Section id=''>
+    <Section id='features'>
       <div className=" w-full block lg:flex justify-between items-center">
         {/* left side */}
           <ScrollReveal>
