@@ -1,102 +1,80 @@
-import Button from "../Buttons/Button";
+import React, { useState } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import data from "./data";
-import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import Button from "../Buttons/Button";
+import data from "./data";
 
-
-const Header = () => {
-  const [Open, setOpen] = useState<boolean>(false);
+const Header: React.FC = () => {
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="  relative w-full h-[10vh]">
-      <div
-        className=" z-10 header flex justify-between 
-      items-center px-[50px] lg:px-[100px] gap-[44px]
-       fixed h-[60px] bg-white border  w-full "
-      >
-        <div className="left-header">
-          <div className="">
-            <span className="flex">
-              <img className="w-full h-full" src="/logo.svg" alt="" />
-             
-            </span>
-          </div>
+    <header className=" z-10 h-[10vh]  w-full bg-white md:bg-transparent fixed top-0 left-0 right-0">
+      <div className="z-10 header flex justify-between items-center px-4 lg:px-24 gap-6 fixed h-16 bg-white border w-full shadow-md">
+        <div className="left-header flex items-center">
+         <a href="" className="">
+         <img className="w-32 h-8" src="/logo.svg" alt="Logo" />
+         </a>
         </div>
-        {/* right side  */}
-
-        
-        <nav className="right-header bg-white navbar hidden lg:flex gap-[17px]">
-          <div className="lg:flex items-center justify-center text-textColor gap-[17px]">
-            {data.map((item, i) => (
+        <nav className="right-header hidden lg:flex items-center gap-4">
+          <ul className="flex items-center gap-4 text-textColor">
+            {data.map((item, index) => (
               <li
-                key={i}
-                onClick={()=> setOpen(!Open)}
-                className={` list-none text-center leading-[17px] font-[500] text-[11px] px-[17px]`}
+                key={index}
+                className="list-none text-center font-medium text-sm px-4 py-2"
               >
-               <a href={item.link}>{item.name}</a>
-
+                <a href={item.link} className="hover:text-primary transition">
+                  {item.name}
+                </a>
               </li>
             ))}
-          </div>
-          <div>
-            <Button
-              label="Register Now"
-              icon={<FaLongArrowAltRight className="w-[11px] h-[11px]" />}
-            />
-          </div>
+          </ul>
+
+          <Button
+            label="Register Now"
+            icon={<FaLongArrowAltRight className="w-3 h-3" />}
+          />
         </nav>
-        
-        {/* menu bar */}
-        <div
-          className={`right-header  bg-white ${
-            Open ? "top-[60px] right-[0px] " : "top-[60px] right-[-100%]"
-          } h-[100vh]  border p-4 
-            block absolute transition-all 
-         ease-in-out  duration-500 lg:hidden w-full gap-[17px] `}
-        >
-          <div
-            className={`lg:flex mt-[3rem] items-center 
-              justify-center text-textColor lg:gap-[17px]`}
-          >
-            {data.map((item, i) => (
-              <li
-                key={i}
-                onClick={() => setOpen((prev) => !prev)}
-                className={`
-                  p-2 rounded-md shadow-sm border my-5 w-[200px]  list-none  leading-[17px] font-[500]  px-[17px]`}
-              >
-                <a href={item.link}>{item.name}</a>
-              </li>
-            ))}
-          </div>
-          <div>
-            <Button
-              label="Register Now"
-              icon={<FaLongArrowAltRight className="w-[11px] h-[11px]" />}
-            />
-          </div>
-        </div>
-
-        {/* menu */}
-        <div className=" block lg:hidden w-full absolute left-[70%] px-[20px] m-auto">
-          {!Open ? (
+        <div className="lg:hidden flex items-center">
+        <button className="px-4">
+        {!open ? (
             <HiMenuAlt3
-              className=" cursor-pointer"
+              className="cursor-pointer"
               size={25}
-              onClick={() => setOpen((prev) => !prev)}
+              onClick={() => setOpen(true)}
             />
           ) : (
             <IoClose
-              className=" cursor-pointer"
+              className="cursor-pointer"
               size={25}
-              onClick={() => setOpen((prev) => !prev)}
+              onClick={() => setOpen(false)}
             />
           )}
+        </button>
         </div>
       </div>
-    </div>
+      {open && (
+        <nav className="lg:hidden bg-white fixed top-16 right-0 w-full h-full flex flex-col items-center gap-6 p-6 border-t">
+          <ul className="flex flex-col items-center gap-4 text-textColor">
+            {data.map((item, index) => (
+              <li
+                key={index}
+                className="list-none text-center font-medium text-base py-2 w-full "
+                onClick={() => setOpen(false)}
+              >
+                <a href={item.link} className="block w-full">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <Button
+            label="Register Now"
+            icon={<FaLongArrowAltRight className="w-3 h-3" />}
+          />
+        </nav>
+      )}
+    </header>
   );
 };
 

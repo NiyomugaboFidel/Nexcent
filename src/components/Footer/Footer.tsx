@@ -17,9 +17,9 @@ const Footer:React.FC = () => {
           <span className="flex justify-center items-start w-full h-full text-center">
               <img  className='' src="/logo2.svg" alt="" />
             </span>
-            <span className='text-silver text-center leading-[25px] text-[11px] '>
+            <span className='text-silver text-center leading-loose lg:text-p md:text-[14px] text-[11px] '>
             Copyright &copy; {new Date().getFullYear()} Landify UI Kit.
-            <p className=' leading-p text-p text-silver '>All rights reserved</p>
+            <p className=' leading-snug lg:text-p md:text-[14px] text-[11px] text-grey '>All rights reserved</p>
             </span>
             <span className='flex items-center text-center justify-center gap-5'>
               <a href="#" className='text-silver  font-semibold text-[16px] lg:text-[20px]'> <FaGithub /> </a>
@@ -32,31 +32,31 @@ const Footer:React.FC = () => {
           <div className='flex items-start justify-normal w-full h-full py-[20px]'>
           <div className='w-full h-full pb-2   gap-2 md:gap-[20px] grid grid-cols-3  '>
              <div className='w-full h-full'>
-              <h2  className='text-[13px] text-silver font-semibold leading-[19px] py-2'>Company</h2>
+              <h2  className='md:text-md text-sm lg:text-xl text-silver font-semibold leading-snug py-2'>Company</h2>
               <ul>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">About us</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Blog</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Contact us</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Pricing</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Testimonials</a></li>
+                <li  className='li-link'><a href="#">About us</a></li>
+                <li  className='li-link'><a href="#">Blog</a></li>
+                <li  className='li-link'><a href="#">Contact us</a></li>
+                <li  className='li-link'><a href="#">Pricing</a></li>
+                <li  className='li-link'><a href="#">Testimonials</a></li>
               </ul>
              </div>
              <div className='w-full h-full'>
-              <h2 className='text-[13px] text-silver font-semibold leading-[19px] py-2'>Support</h2>
+              <h2 className='md:text-md text-sm lg:text-xl text-silver font-semibold leading-snug py-2'>Support</h2>
               <ul>
-                <li className='text-p text-gray-400 leading-p'><a href="#">Help center</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Terms of service</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Legal</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Privacy policy</a></li>
-                <li  className='text-p text-gray-400 leading-p'><a href="#">Status</a></li>
+                <li className='li-link'><a href="#">Help center</a></li>
+                <li className='li-link'><a href="#">Terms of service</a></li>
+                <li  className='li-link'><a href="#">Legal</a></li>
+                <li  className='li-link'><a href="#">Privacy policy</a></li>
+                <li  className='li-link'><a href="#">Status</a></li>
               </ul>
              </div>
              <div className='w-full h-full'>
-              <h2 className='text-[13px] text-silver font-semibold leading-[19px] py-2'>Stay up to date</h2>
+              <h2 className='md:text-md text-sm lg:text-xl text-silver font-semibold leading-snug py-2 w-[200px]'>Stay up to date</h2>
                <div className='bg-gray-400 flex items-center justify-center border px-1 rounded-lg w-full'>
                <input className='bg-transparent w-full p-1 outline-none border-none' placeholder='Your email address' type="text" />
                <span>
-               <TbSend className='text-white text-[20px] font-semibold mb-2 ' />
+               <TbSend className='text-white text-[20px] font-semibold ' />
                </span>
                </div>
              </div>

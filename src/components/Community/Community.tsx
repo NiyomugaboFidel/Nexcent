@@ -1,44 +1,43 @@
 import React from "react";
 import Client from "../Client/Client";
-import Section from "../Section";
 import data from "./data";
 import ScrollReveal from "../Animations/ScrollReveal";
 
 const Community: React.FC = () => {
   return (
-    <Section id="community" className="bg-white">
+    <section id="community" className="bg-white py-8 lg:py-16">
       <Client />
-      <div className="w-full h-full py-[27px]">
+      <div className="w-full py-8 lg:py-16 px-4 lg:px-8">
         <ScrollReveal>
-        <div className="h-full flex items-center flex-col  ">
-          <h2 className="text-black lg:leading-h2 lg:text-h2 font-semibold text-center">
-            Manage your entire community <br />
-            in a single system
-          </h2>
-          <p className="text-dGrey text-p leading-p text-center">
-            Who is Nextcent suitable for?
-          </p>
-        </div>
+          <div className="flex flex-col items-center text-center mb-8">
+            <h2 className="text-2xl lg:text-4xl font-semibold text-black leading-tight">
+              Manage your entire community <br />
+              in a single system
+            </h2>
+            <p className="text-sm lg:text-base text-dGrey leading-relaxed">
+              Who is Nextcent suitable for?
+            </p>
+          </div>
 
-        <div className="grid grid-cols-3  py-[11px]  w-full gap-[20px] lg:gap-[89px] items-center">
-          {data.map((item, index) => (
-            <div
-              className="flex shadow-md hover:scale-110 lg:hover:scale-125 transition-all ease-in-out duration-300 px-[10px] py-[8px] rounded-lg p-[20px] lg:p-[40px] flex-col items-center text-center justify-center"
-              key={index}
-            >
-              <img src={item.icon} alt="" />
-              <h2 className=" lg:leading-h2 lg:text-h2 p-2 leading-[12px] text-[12px]  font-semibold">
-                {item.title}
-              </h2>
-              <p className="lg:leading-p leading-[8px]  lg:text-p text-[8px] md:text-[6px]">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {data.map((item, index) => (
+              <div
+                className="flex flex-col items-center text-center p-4 lg:p-6 bg-white shadow-md rounded-lg hover:scale-105 transition-transform duration-300"
+                key={index}
+              >
+                <img className="w-16 h-16 lg:w-24 lg:h-24 mb-4" src={item.icon} alt={item.title} />
+                <h2 className="text-lg lg:text-xl font-semibold mb-2">
+                  {item.title}
+                </h2>
+                <p className="text-sm lg:text-base text-dGrey">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </ScrollReveal>
       </div>
-    </Section>
+    </section>
   );
 };
 

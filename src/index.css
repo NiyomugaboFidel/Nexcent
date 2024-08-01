@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 *:root{
-  font-family: inter;
 
+  font-family: 'Inter', sans-serif;
 
+}
+body{
+  font-family: 'Inter', sans-serif;
 }
 a{
  text-decoration: none;
@@ -39,4 +42,13 @@ input::placeholder{
 }
 input{
   font-size: 12px;
+}
+
+.btn-primary{
+  @apply flex items-center justify-center px-5 py-1 lg:px-7 lg:py-2 bg-primary text-white rounded hover:bg-green-600 transition-all duration-100 
+ text-[14px] lg:text-p hover:scale-105;
+}
+
+.li-link{
+  @apply lg:text-p md:text-[14px] text-[11px] text-gray-400 leading-snug
 }

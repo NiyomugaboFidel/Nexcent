@@ -4,45 +4,70 @@ import "slick-carousel/slick/slick-theme.css";
 import logos from './data'; // Ensure this is correctly imported and contains valid image URLs
 
 const Client: React.FC = () => {
-
-
   const settings = {
-    dots: false, // Disable default dots
+    dots: false,
     infinite: true,
     speed: 2000,
-    slidesToShow: 8,
-    slidesToScroll: 8,
+    slidesToShow: 4,  // Adjusted for smaller screens
+    slidesToScroll: 4, // Adjusted for smaller screens
     autoplay: true,
-    autoplaySpeed:6000,
+    autoplaySpeed: 1000,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
- 
-
-  console.log(logos)
-
   return (
-  <div className='my-[40px]'>
-    
-    <div className='h-full w-full'>
-         <h2 className=' lg:leading-h2 lg:text-h2 text-center font-semibold text-black '>
-         Our Clients
-         </h2>
-         <p className='text-[11px] text-center text-dGrey'>We have been working with some Fortune 500+ clients</p>
-        </div>
+    <div className='my-10 px-4 lg:px-8'>
+      <div className='text-center mb-8'>
+        <h2 className='text-2xl lg:text-4xl font-semibold text-black leading-tight'>
+          Our Clients
+        </h2>
+        <p className='text-sm lg:text-base text-dGrey'>
+          We have been working with some Fortune 500+ clients
+        </p>
+      </div>
 
-        <div className='h-[32px] px-[48px] py-[32px]   '>
-          <Slider {...settings}>
-            {logos.map((logo, index) => (
-                <div className='flex items-center justify-center' key={index}>
-                    <img  className='' src={logo} alt='Clients' />
-                    <span className='text-[5px] leading-3 lg:text-[9px] text-center flex items-center justify-center absolute -bottom-1'>company</span>
-                </div>
-            
-            ))}
-          </Slider>
-        </div>
-  </div>
-       
+      <div className='relative'>
+        <Slider {...settings}>
+          {logos.map((logo, index) => (
+            <div className='flex items-center justify-center p-4' key={index}>
+              <img className='max-w-full h-auto' src={logo} alt='Clients' />
+              <span className='text-xs font-bold lg:text-sm absolute bottom-0 mb-2 text-center '>
+                company
+              </span>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 };
 

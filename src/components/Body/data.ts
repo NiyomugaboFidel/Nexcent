@@ -49,6 +49,13 @@ export const blogs = [
       desc:'What are your safeguarding responsibilities and how can you manage them?',
       complete:true,
 
+   },
+   {  
+      id:3,
+      image:image4,
+      desc:'What are your safeguarding responsibilities and how can you manage them?',
+      complete:true,
+
    }
    
 ]

@@ -9,19 +9,18 @@ import CommunityUp from "./components/Body/CommunityUp";
 import Calender from './components/Body/Calender'
 const App = () => {
   return (
-    <div className="">
+    <>
       <Header />
-     <div className="">
        <Home />
-       <Community />
-       <Unlock />
-       <Achievements />
-       <Calender />
-        <Customers />
-        <CommunityUp />
-       <Footer />
-     </div>
-    </div>
+        <Community />
+        <Unlock />
+        <Achievements />
+        <Calender />
+        <Customers /> 
+        <CommunityUp /> 
+       <Footer /> 
+  
+    </>
   )
 }
 

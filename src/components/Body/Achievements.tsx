@@ -5,35 +5,35 @@ import { ScrollCounter } from "../Animations/ScrollReveal";
 
 const Achievements: React.FC = () => {
   return (
-    <div className="bg-silver my-[44px] lg:h-[202px] w-full">
-      <Section id="">
-        <div className=" block lg:flex justify-between items-center w-full h-full">
-          {/* left side */}
-          <div className="flex flex-col justify-center h-full py-[50px]">
-            <h2 className=" leading-h2 text-h2 text-dGrey font-semibold">
+    <div id="features" className="bg-silver py-8 lg:py-16">
+      <Section id="achievements" className="w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between w-full h-full px-4 lg:px-8">
+          {/* Left Side */}
+          <div className="flex flex-col justify-center items-center lg:items-start lg:w-1/2 py-6 lg:py-0">
+            <h2 className="text-xl lg:text-3xl font-semibold text-dGrey text-center lg:text-left mb-4 lg:mb-6">
               Helping a local <br />{" "}
               <span className="text-primary">business reinvent itself</span>
             </h2>
-            <p className=" leading-p text-p text-grey">
+            <p className="text-sm lg:text-base text-grey text-center lg:text-left">
               We reached here with our hard work and dedication
             </p>
           </div>
-          {/* right side  */}
-          <div className="grid grid-cols-2 gap-[20px] items-center justify-center">
+          {/* Right Side */}
+          <div className="grid grid-cols-2 gap-4 lg:gap-8 items-center justify-center lg:justify-start lg:w-1/2">
             {achievementData.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-2 items-center justify-center"
+                className="flex items-center gap-2"
               >
-                <img src={item.icon} alt="" />
-                <div className="flex flex-col items-start justify-center ">
+                <img src={item.icon} alt={item.name} className="w-8 h-8 lg:w-12 lg:h-12" />
+                <div className="flex flex-col items-start">
                   <ScrollCounter
-                    className=" transition-all ease-in-out duration-300"
+                    className="text-xl lg:text-2xl font-bold transition-all ease-in-out duration-300"
                     start={45000}
                     end={item.number}
                     duration={2}
                   />
-                  <span className="text-p ">{item.name}</span>
+                  <span className="text-sm lg:text-base">{item.name}</span>
                 </div>
               </div>
             ))}

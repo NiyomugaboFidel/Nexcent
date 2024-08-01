@@ -4,7 +4,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const Baner:React.FC = () => {
   return (
-    <div className='bg-silver w-full md:h-[209px] h-[105px] flex flex-col items-center justify-center '>
+    <div className='bg-silver max-w-screen-2xl md:h-[209px] h-[105px] flex flex-col items-center justify-center '>
      <h2 className='lg:w-[617px] lg:py-[22px] lg:leading-[53px] lg:text-[44px] font-semibold text-center text-black'>
      Pellentesque suscipit fringilla libero eu.
      </h2>

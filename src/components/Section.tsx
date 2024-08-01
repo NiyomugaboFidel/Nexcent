@@ -1,16 +1,16 @@
 import React from "react";
-type props = {
+
+type Props = {
   children: React.ReactNode;
   className?: string;
   id: string;
 };
 
-const Section= ({ children, className, id }: props) => {
+const Section = ({ children, className = "", id }: Props) => {
   return (
     <section
       id={id}
-      className={`hero
-     lg:px-[100px] px-[25px] lg:py-[30px] py-[15px]  w-full ${className} `}
+      className={`hero w-full lg:px-[100px] px-[25px] lg:py-[30px] py-[15px] ${className}`}
     >
       {children}
     </section>
